@@ -20,11 +20,10 @@ var workerSchema = mongoose.Schema({
 
 var Worker = mongoose.model('Worker', workerSchema);
 
-var testWorker = new Worker({worker_id:0, mac_addr:"test_addr", ip_addr:"test_addr", status:'test'});
+var testWorker = new Worker({worker_id:0, mac_addr:"test_addr", ip_addr:"127.0.0.1", status:"test"});
 testWorker.save(function (err, testWorker) {
   if (err) return console.error(err);
-  console.log(testWorker.status);
+  console.log(testWorker);
 });
 
 module.exports = Worker;
-//var Worker = mongoose.model('Worker', workerSchema);

@@ -18,11 +18,11 @@ var workSchema = mongoose.Schema({
 });
 
 var Work = mongoose.model('Work', workSchema);
-
+/*
 var testWork = new Work({work_id:0, worker_id:0, data:'test'});
 testWork.save(function (err, testWork) {
   if (err) return console.error(err);
-  console.log(testWork.data);
+  console.log(testWork);
 });
-
+*/
 module.exports = Work;
